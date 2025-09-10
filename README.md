@@ -1,2 +1,2 @@
 # produto_musga
-insane 
+insane
