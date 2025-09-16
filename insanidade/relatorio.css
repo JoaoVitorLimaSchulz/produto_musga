@@ -1,0 +1,89 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    color: yellow;
+}
+
+/* Estilo do card */
+.card {
+    background-color: yellow;
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.list-group-item {
+    background-color: black;
+    color: yellow;
+    border: none;
+    font-size: 1.1rem;
+    padding: 10px;
+}
+
+.list-group-item:not(:last-child) {
+    border-bottom: 1px solid #444;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer .btn {
+    background-color: yellow;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+.voltar-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-back {
+    background-color: yellow;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-decoration: none; 
+    display: inline-block;
+}
+
+.btn-back:hover {
+    background-color: #f9c600; 
+    color: black;
+}

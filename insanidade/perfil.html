@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="estiloPrincipal.css">
+</head>
+<body>
+    <div class="container">
+        <div class="perfil-header">
+            <h1>Meu Perfil</h1>
+            <p>Informações pessoais</p>
+        </div>
+        
+        <div class="perfil-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsFv43K2sABH4q6fen3qeT-vV9AllCv0z4iA&s" class="perfil-img" alt="Perfil">
+            <div class="perfil-info">
+                <p><strong>Nome Usuário:</strong> <span id="nomeUsuario">Usuario123</span></p>
+                <p><strong>Email:</strong> <span id="emailUsuario">usuario123@gmail.com</span></p>
+                <p><strong>País:</strong> <span id="paisUsuario">Sudão do Sul</span></p>
+                <p><strong>Cidade:</strong> <span id="cidadeUsuario">Sudão La</span></p>
+            </div>
+        </div>
+        
+        <div class="botao-container">
+            <a href="relatorio-musicas.html" class="btn btn-primary">Relatório de músicas</a>
+            <a href="#" id="assinarBtn" class="btn btn-primary">Assinar Plus</a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modalAlterarInfo" class="btn btn-primary">Mudar informações</a>
+            <a href="#" class="btn btn-danger">Excluir perfil</a>
+            <div class="voltar-container">
+                <a href="paginaPrincipal.html" class="btn btn-back">Voltar para a Tela Principal</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="modalAlterarInfo" tabindex="-1" aria-labelledby="modalAlterarInfoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAlterarInfoLabel">Alterar Informações</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formAlterarInfo">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome de Usuário</label>
+                            <input type="text" class="form-control" id="nome" value="Usuario123">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" value="usuario123@gmail.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="pais" class="form-label">País</label>
+                            <input type="text" class="form-control" id="pais" value="Sudão do Sul">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cidade" class="form-label">Cidade</label>
+                            <input type="text" class="form-control" id="cidade" value="Sudão La">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        
+        const relatorioBtn = document.querySelector('.btn-primary');
+        relatorioBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = 'relatorio-musicas.html';  // Redireciona para a página de relatórios
+        });
+
+        
+        const formAlterarInfo = document.getElementById('formAlterarInfo');
+        formAlterarInfo.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const pais = document.getElementById('pais').value;
+            const cidade = document.getElementById('cidade').value;
+
+            
+            document.getElementById('nomeUsuario').innerText = nome;
+            document.getElementById('emailUsuario').innerText = email;
+            document.getElementById('paisUsuario').innerText = pais;
+            document.getElementById('cidadeUsuario').innerText = cidade;
+
+            
+            const modal = new bootstrap.Modal(document.getElementById('modalAlterarInfo'));
+            modal.hide();
+        });
+    </script>
+</body>
+</html>

@@ -7,37 +7,78 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="estiloPrincipal.css">
 </head>
-</head>
 <body>
-    <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-    
+    <h1>MUSGA</h1>
+    <div class="card box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsFv43K2sABH4q6fen3qeT-vV9AllCv0z4iA&s" class="" alt="">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Perfil</h5>
+            <p class="card-text">Informaçôes pessoais e mais opções de usuario</p>
+            <a href="#" class="btn btn-primary"id="acessarPerfilBtn">Acessar perfil</a>
         </div>
-        </div>
-        
-        <div class="card" aria-hidden="true">
-            <img src="..." class="card-img-top" alt="...">
+    </div>
+    
+    <!-- <div class="card" aria-hidden="true">
+        <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title placeholder-glow">
-            <span class="placeholder col-6"></span>
+                <span class="placeholder col-6"></span>
             </h5>
             <p class="card-text placeholder-glow">
-            <span class="placeholder col-7"></span>
-            <span class="placeholder col-4"></span>
-            <span class="placeholder col-4"></span>
-            <span class="placeholder col-6"></span>
-            <span class="placeholder col-8"></span>
+                <span class="placeholder col-7"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-6"></span>
+                <span class="placeholder col-8"></span>
             </p>
             <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
         </div>
+    </div>
+    -->
+    <div class="box2">
+        <div class="card box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxlTo9fQhFxLFDLGsYvkyC_1wEedrW10CNQw&s" class="" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Suas Playslists</h5>
+                <p class="card-text">Crie Playlists, edite e ouça suas musicas</p>
+                <a href="#" class="btn btn-primary" id="BotaoPlay">Go somewhere</a>
+            </div>
         </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <scrip>
+        <div class="card box">
+            <img src="https://www.elhombre.com.br/wp-content/uploads/2014/08/1994-musica-el-hombre.jpg" class="" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Albuns</h5>
+                <p class="card-text">descubra e ouça os albuns de seus artistas favoritos</p>
+                <a href="#" class="btn btn-primary" id="BotaoAlbum">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card box">
+            <img src="https://www.edivaldobrito.com.br/wp-content/uploads/2025/09/seis-dicas-para-descobrir-novas-musicas-no-youtube-music.webp" class="" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Descobrir novas musicas</h5>
+                <p class="card-text">Veja o top global do mundo baseados no seu gosto</p>
+                <a href="#" class="btn btn-primary" id="BotaoDescobrir">Go somewhere</a>
+            </div>
+        </div>
+    </div>
 
-    </scrip>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const acessarPerfilBtn = document.getElementById("acessarPerfilBtn"); 
+            acessarPerfilBtn.addEventListener("click", function(event) {
+                event.preventDefault(); 
+                window.location.href = "perfil.html";
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            const acessarPerfilBtn = document.getElementById("BotaoPlay"); 
+            acessarPerfilBtn.addEventListener("click", function(event) {
+                event.preventDefault(); 
+                window.location.href = "playlist.html";
+            });
+        });
+    </script>
 </body>
 </html>
