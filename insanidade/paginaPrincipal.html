@@ -57,7 +57,7 @@
             <div class="card-body">
                 <h5 class="card-title">Descobrir novas musicas</h5>
                 <p class="card-text">Veja o top global do mundo baseados no seu gosto</p>
-                <a href="#" class="btn btn-primary" id="BotaoDescobrir">Go somewhere</a>
+                <a href="https://youtu.be/ELY08moRqsw?si=RzW61CGh4kudrFeQ" class="btn btn-primary" id="BotaoDescobrir">Go somewhere</a>
             </div>
         </div>
     </div>
@@ -74,9 +74,16 @@
         });
         document.addEventListener("DOMContentLoaded", function() {
             const acessarPerfilBtn = document.getElementById("BotaoPlay"); 
-            acessarPerfilBtn.addEventListener("click", function(event) {
+            BotaoPlay.addEventListener("click", function(event) {
                 event.preventDefault(); 
                 window.location.href = "playlist.html";
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            const acessarPerfilBtn = document.getElementById("BotaoPlay"); 
+            BotaoAlbum.addEventListener("click", function(event) {
+                event.preventDefault(); 
+                window.location.href = "album.html";
             });
         });
     </script>
